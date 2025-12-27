@@ -1,22 +1,33 @@
-import { getIntlayer } from 'intlayer';
-import { useIntlayer } from 'react-intlayer';
+import { getIntlayer, validatePrefix } from "intlayer";
+import { useIntlayer } from "react-intlayer";
+import { data } from "react-router";
 
-import { LocaleSwitcher } from '~/components/locale-switcher';
-import { Navbar } from '~/components/navbar';
+import { LocaleSwitcher } from "~/components/locale-switcher";
+import { Navbar } from "~/components/navbar";
 
-import type { Route } from './+types/($locale).about';
+import type { Route } from "./+types/($locale).about";
+
+export const loader = ({ params }: Route.LoaderArgs) => {
+  const { locale } = params;
+
+  const { isValid } = validatePrefix(locale);
+
+  if (!isValid) {
+    throw data("Locale not supported", { status: 404 });
+  }
+};
 
 export const meta: Route.MetaFunction = ({ params }) => {
-  const content = getIntlayer('about-meta', params.locale);
+  const content = getIntlayer("about-meta", params.locale);
 
   return [
     { title: content.title },
-    { content: content.description, name: 'description' },
+    { content: content.description, name: "description" },
   ];
 };
 
 export default function Page() {
-  const { about } = useIntlayer('about');
+  const { about } = useIntlayer("about");
 
   return (
     <div className="grid h-screen place-items-center">
