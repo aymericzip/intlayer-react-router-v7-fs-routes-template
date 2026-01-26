@@ -14,11 +14,11 @@
   "dependencies": {
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.9.4",
-    "intlayer": "latest",
+    "intlayer": "8.0.0-canary.5",
     "isbot": "^5.1.31",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-intlayer": "latest",
+    "react-intlayer": "8.0.0-canary.5",
     "react-router": "^7.9.3",
     "react-router-dom": "^7.9.4"
   },
@@ -36,7 +36,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2",
     "vite": "^7.1.12",
-    "vite-intlayer": "latest",
+    "vite-intlayer": "8.0.0-canary.5",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
