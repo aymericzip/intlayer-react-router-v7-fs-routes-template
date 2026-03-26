@@ -34,8 +34,8 @@
     "eslint-plugin-perfectionist": "^5.7.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2",
-    "typescript-eslint": "^8.46.2",
-    "vite": "^8.0.2",
+    "typescript-eslint": "^8.57.2",
+    "vite": "^8.0.3",
     "vite-intlayer": "latest",
     "vite-tsconfig-paths": "^6.1.1"
   },
