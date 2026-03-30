@@ -36,8 +36,7 @@
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.57.2",
     "vite": "^8.0.3",
-    "vite-intlayer": "latest",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite-intlayer": "latest"
   },
   "engines": {
     "node": ">=20"
